@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Link from 'next/link';
 import { IoSearchOutline, IoCartOutline } from 'react-icons/io5';
@@ -13,9 +13,35 @@ export const TopMenu = () => {
 
   const [loaded, setLoaded] = useState(false);
 
+  //menu desplegable
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     setLoaded(true);
   }, []);
+
+  // Cierra el dropdown al hacer clic fuera
+  useEffect(() => {
+    function handleClickOutside(event: MouseEvent) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // Función para cerrar el menú después de seleccionar
+  const handleLinkClick = () => {
+    setIsDropdownOpen(false);
+  };
 
   return (
     <nav className="flex px-5 justify-between items-center w-full">
@@ -55,6 +81,50 @@ export const TopMenu = () => {
         >
           Sin franquicia
         </Link>
+      </div>
+
+      {/* desplegable */}
+      {/* Pantallas pequeñas */}
+      <div className="sm:hidden relative" ref={dropdownRef}>
+        <button
+          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          className="p-2 m-2 border rounded-md w-full text-left bg-white shadow-sm"
+        >
+          Franquicias
+        </button>
+
+        {isDropdownOpen && (
+          <div className="absolute z-10 w-full bg-white shadow-md rounded-md mt-2">
+            <Link
+              onClick={handleLinkClick}
+              className="block px-4 py-2 hover:bg-gray-100"
+              href="/franchise/pokemon"
+            >
+              Pokemon
+            </Link>
+            <Link
+              onClick={handleLinkClick}
+              className="block px-4 py-2 hover:bg-gray-100"
+              href="/franchise/dragonball"
+            >
+              Dragon Ball
+            </Link>
+            <Link
+              onClick={handleLinkClick}
+              className="block px-4 py-2 hover:bg-gray-100"
+              href="/franchise/bts"
+            >
+              BTS
+            </Link>
+            <Link
+              onClick={handleLinkClick}
+              className="block px-4 py-2 hover:bg-gray-100"
+              href="/franchise/none"
+            >
+              Sin franquicia
+            </Link>
+          </div>
+        )}
       </div>
 
       {/* Search, Cart, Menu */}
