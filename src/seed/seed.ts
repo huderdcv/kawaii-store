@@ -43,7 +43,9 @@ export const initialData: SeedData = {
     },
   ],
   franchises: ['pokemon', 'dragonball', 'bts', 'none'],
+  //productos
   products: [
+    //pokemon
     {
       description:
         'Deliciosas papitas con envoltura especial de Pikachu. Un snack crujiente ideal para los fanáticos del anime y Pokémon, perfecto para cualquier momento del día.',
@@ -95,7 +97,7 @@ export const initialData: SeedData = {
     {
       description:
         'Dulces asiáticos con chocolate y maní, presentados en pequeñas copitas con figuras adorables de Pikachu, Charmander, Squirtle y Pokeball. Un tesoro para los coleccionistas.',
-      images: ['pokemon-5-1.jfif', 'pokemon-5-2.jfif'],
+      images: ['pokemon-5-1.jpg', 'pokemon-5-2.jpg'],
       inStock: 7,
       price: 1,
       slug: 'dulces_choco_figuras_pokemon',
@@ -114,7 +116,7 @@ export const initialData: SeedData = {
     {
       description:
         'Gomitas frutales con envoltura de Pikachu. Suaves, deliciosas y perfectas para disfrutar viendo tu anime favorito.',
-      images: ['pokemon-6-1.jfif', 'pokemon-6-2.jpg'],
+      images: ['pokemon-6-1.jpg', 'pokemon-6-2.jpg'],
       inStock: 7,
       price: 3,
       slug: 'gomitas_pikachu',
