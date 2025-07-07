@@ -43,10 +43,11 @@ export const Sidebar = () => {
       {/* Sidemenu */}
       <nav
         className={clsx(
-          'fixed p-5 right-0 top-0 w-[500px] h-screen bg-white z-20 shadow-2xl transform transition-all duration-300',
+          'fixed top-0 right-0 h-screen bg-white z-50 shadow-2xl transform transition-transform duration-300',
           {
             'translate-x-full': !isSideMenuOpen,
-          }
+          },
+          'w-[90%] sm:w-[400px] md:w-[500px] p-5' // responsive width
         )}
       >
         <IoCloseOutline
