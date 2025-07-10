@@ -57,7 +57,7 @@ export const TopMenu = () => {
       </div>
 
       {/* Center Menu */}
-      <div className="hidden sm:block">
+      <div className="hidden md:block">
         <Link
           className="m-2 p-2 rounded-md transition-all hover:bg-[#ffaf63]"
           href="/franchise/pokemon"
@@ -88,7 +88,7 @@ export const TopMenu = () => {
       <div className="flex items-center">
         {/* desplegable */}
         {/* Pantallas pequeñas */}
-        <div className="sm:hidden relative" ref={dropdownRef}>
+        <div className="md:hidden relative" ref={dropdownRef}>
           <button
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
             className={`p-2 m-2 border-none rounded-md shadow-sm flex items-center gap-2 ${
@@ -142,11 +142,11 @@ export const TopMenu = () => {
 
         <Link
           href={totalItemsInCart === 0 && loaded ? '/empty' : '/cart'}
-          className="mx-2"
+          className="mx-2 transition hover:scale-150"
         >
           <div className="relative">
             {loaded && totalItemsInCart > 0 && (
-              <span className="fade-in absolute text-xs px-1 rounded-full font-bold -top-2 -right-2 bg-blue-700 text-white">
+              <span className="fade-in absolute text-xs px-1 rounded-full font-bold -top-2 -right-2 bg-[#FFD700] text-black">
                 {totalItemsInCart}
               </span>
             )}
