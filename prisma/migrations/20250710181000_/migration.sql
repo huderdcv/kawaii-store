@@ -28,14 +28,14 @@ CREATE TABLE "Product" (
     "description" TEXT NOT NULL,
     "inStock" INTEGER NOT NULL,
     "price" DOUBLE PRECISION NOT NULL DEFAULT 0,
-    "kawaiiPointsRequired" INTEGER NOT NULL DEFAULT 0,
-    "kawaiiPointsEarned" INTEGER NOT NULL DEFAULT 1,
+    "kawaiiPointsRequired" DOUBLE PRECISION NOT NULL DEFAULT 0,
+    "kawaiiPointsEarned" DOUBLE PRECISION NOT NULL DEFAULT 1,
     "countryOfOrigin" "CountryOfOrigin" NOT NULL DEFAULT 'other',
     "productType" "ProductType" NOT NULL DEFAULT 'individual',
     "availabilityType" "AvailabilityType" NOT NULL DEFAULT 'general',
     "slug" TEXT NOT NULL,
     "tags" TEXT[] DEFAULT ARRAY[]::TEXT[],
-    "themeCategory" "ThemeCategory",
+    "themeCategory" "ThemeCategory" NOT NULL DEFAULT 'none',
     "franchiseId" TEXT NOT NULL,
 
     CONSTRAINT "Product_pkey" PRIMARY KEY ("id")

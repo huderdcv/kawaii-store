@@ -1,3 +1,5 @@
+import { AvailabilityType } from '@prisma/client';
+
 export interface Product {
   id: string;
   description: string;
@@ -7,6 +9,13 @@ export interface Product {
   slug: string;
   tags: string[];
   title: string;
+  kawaiiPointsRequired: number;
+  kawaiiPointsEarned: number;
+  countryOfOrigin: CountryOfOrigin;
+  productType: ProductType;
+  availabilityType: AvailabilityType;
+  themeCategory: ThemeCategory;
+
   //todo: type: Type;
 }
 
@@ -24,3 +33,8 @@ export interface ProductImage {
   url: string;
   productId: string;
 }
+
+export type CountryOfOrigin = 'korea' | 'japan' | 'china' | 'other';
+export type ProductType = 'individual' | 'pack';
+export type availabilityType = 'general' | 'exclusive';
+export type ThemeCategory = 'anime' | 'kpop' | 'none';

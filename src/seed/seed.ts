@@ -10,6 +10,8 @@ interface SeedProduct {
   title: string;
   type: ValidTypes;
   themeCategory: 'anime' | 'kpop' | 'none';
+  countryOfOrigin: 'korea' | 'japan' | 'china' | 'other';
+  kawaiiPointsEarned: number;
 }
 
 interface SeedUser {
@@ -57,6 +59,8 @@ export const initialData: SeedData = {
       tags: ['papitas', 'pikachu'],
       title: 'Papitas con Envoltura de Pikachu',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.3,
     },
     {
       description:
@@ -69,6 +73,8 @@ export const initialData: SeedData = {
       tags: ['pastillas', 'acidas', 'pikachu'],
       title: 'Pastillas Ácidas Pikachu',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.3,
     },
     {
       description:
@@ -81,6 +87,8 @@ export const initialData: SeedData = {
       tags: ['bebida', 'soda', 'charmander'],
       title: 'Soda Lata Charmander',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.7,
     },
     {
       description:
@@ -93,6 +101,8 @@ export const initialData: SeedData = {
       tags: ['bebida', 'soda', 'bulbasaur'],
       title: 'Soda Lata Bulbasaur',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.7,
     },
     {
       description:
@@ -112,6 +122,8 @@ export const initialData: SeedData = {
       ],
       title: 'Dulces Choco con Figuras Pokémon',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.1,
     },
     {
       description:
@@ -124,6 +136,8 @@ export const initialData: SeedData = {
       tags: ['gomitas', 'pikachu', 'dulces'],
       title: 'Gomitas Pikachu',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.3,
     },
     {
       description:
@@ -136,6 +150,8 @@ export const initialData: SeedData = {
       tags: ['bebida', 'soda', 'pikachu'],
       title: 'Soda Lata Pikachu',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.7,
     },
     {
       description:
@@ -148,6 +164,8 @@ export const initialData: SeedData = {
       tags: ['chetos', 'dragon ball', 'snack'],
       title: 'Chetos Dragon Ball',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.2,
     },
     {
       description:
@@ -160,6 +178,8 @@ export const initialData: SeedData = {
       tags: ['bebida', 'soda', 'goku'],
       title: 'Soda Lata Goku',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.7,
     },
     {
       description:
@@ -172,6 +192,8 @@ export const initialData: SeedData = {
       tags: ['bebida', 'soda', 'gohan'],
       title: 'Soda Lata Gohan',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.7,
     },
     {
       description:
@@ -184,6 +206,8 @@ export const initialData: SeedData = {
       tags: ['bebida', 'soda', 'boo'],
       title: 'Soda Lata Majin Boo',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.7,
     },
     {
       description:
@@ -196,6 +220,8 @@ export const initialData: SeedData = {
       tags: ['bebida', 'soda', 'goku', 'vegeta', 'gohan'],
       title: 'Soda Lata Guerreros Z',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.7,
     },
     {
       description:
@@ -208,6 +234,8 @@ export const initialData: SeedData = {
       tags: ['dulce', 'coco', 'dragon ball'],
       title: 'Dulce de Coco Dragon Ball',
       themeCategory: 'anime',
+      countryOfOrigin: 'japan',
+      kawaiiPointsEarned: 0.1,
     },
     //BTS
     {
@@ -221,6 +249,8 @@ export const initialData: SeedData = {
       tags: ['bt21', 'bebida', 'bts', 'dulce', 'coleccionable'],
       title: 'BT21 Sips & Sweets: Una Dulzura K-pop',
       themeCategory: 'kpop',
+      countryOfOrigin: 'korea',
+      kawaiiPointsEarned: 1.2,
     },
     {
       description:
@@ -233,6 +263,8 @@ export const initialData: SeedData = {
       tags: ['snicker', 'almendras', 'bts', 'snack'],
       title: 'Snicker Almendras BTS Edition',
       themeCategory: 'kpop',
+      countryOfOrigin: 'korea',
+      kawaiiPointsEarned: 0.5,
     },
     {
       description:
@@ -245,6 +277,8 @@ export const initialData: SeedData = {
       tags: ['café', 'americano', 'bts', 'coleccionable'],
       title: 'Hot Brew BTS: Sweet Black Americano',
       themeCategory: 'kpop',
+      countryOfOrigin: 'korea',
+      kawaiiPointsEarned: 1.4,
     },
     {
       description:
@@ -257,6 +291,8 @@ export const initialData: SeedData = {
       tags: ['bebida', 'macchiato', 'caramel', 'bts'],
       title: 'Iced Caramel Macchiato BTS Edition',
       themeCategory: 'kpop',
+      countryOfOrigin: 'korea',
+      kawaiiPointsEarned: 1.4,
     },
     {
       description:
@@ -269,6 +305,8 @@ export const initialData: SeedData = {
       tags: ['cereal', 'bts', 'colección', 'chk', 'desayuno'],
       title: 'Cereal ChK x BTS: ¡Despierta con K-pop!',
       themeCategory: 'kpop',
+      countryOfOrigin: 'korea',
+      kawaiiPointsEarned: 1.7,
     },
     // SIN CATEGORIA
     {
@@ -282,6 +320,8 @@ export const initialData: SeedData = {
       tags: ['caramelo', 'blueberry', 'dulces coreanos'],
       title: 'Candy Blueberry Coreano 100g',
       themeCategory: 'none',
+      countryOfOrigin: 'korea',
+      kawaiiPointsEarned: 0.69,
     },
     {
       description:
@@ -294,6 +334,8 @@ export const initialData: SeedData = {
       tags: ['choco pie', 'snack', 'coreano'],
       title: 'Choco Pie Original Coreano',
       themeCategory: 'none',
+      countryOfOrigin: 'korea',
+      kawaiiPointsEarned: 0.35,
     },
     {
       description:
@@ -306,6 +348,8 @@ export const initialData: SeedData = {
       tags: ['taiyaki', 'postre', 'dulce coreano'],
       title: 'Taiyaki Coreano Tradicional',
       themeCategory: 'none',
+      countryOfOrigin: 'korea',
+      kawaiiPointsEarned: 0.79,
     },
     {
       description:
@@ -318,6 +362,8 @@ export const initialData: SeedData = {
       tags: ['chocolate', 'ghana', 'corea'],
       title: 'Chocolate Ghana Clásico',
       themeCategory: 'none',
+      countryOfOrigin: 'korea',
+      kawaiiPointsEarned: 0.65,
     },
     {
       description:
@@ -330,6 +376,8 @@ export const initialData: SeedData = {
       tags: ['crown', 'masticables', 'dulces', 'coreanos'],
       title: 'Masticables Crown – Sabor Coreano en Miniatura',
       themeCategory: 'none',
+      countryOfOrigin: 'korea',
+      kawaiiPointsEarned: 0.55,
     },
   ],
 };
