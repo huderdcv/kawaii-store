@@ -1,5 +1,6 @@
 export * from './products/product-grid/ProductGrid';
 export * from './products/product-grid/ProductGridItem';
+export * from './products/product-grid-item/AddToCartOnly';
 
 export * from './orders/OrderStatus';
 
