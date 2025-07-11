@@ -47,7 +47,7 @@ export const TopMenu = () => {
   return (
     <nav className="flex px-5 justify-between items-center w-full bg-[#FF7C00]">
       {/* Logo */}
-      <div>
+      <div className="transition hover:scale-125">
         <Link href="/">
           <span className={`${titleFont.className} antialiased font-bold`}>
             Kawaii
@@ -100,11 +100,11 @@ export const TopMenu = () => {
             ) : (
               <Menu className="w-5 h-5" />
             )}
-            <span>Franquicias</span>
+            {/* <span>Franquicias</span> */}
           </button>
 
           {isDropdownOpen && (
-            <div className="absolute z-10 w-full bg-white shadow-md rounded-md mt-2">
+            <div className="absolute z-10 w-screen bg-white shadow-md rounded-md mt-2">
               <Link
                 onClick={handleLinkClick}
                 className="block px-4 py-2 hover:bg-[#ffaf63]"
@@ -136,7 +136,7 @@ export const TopMenu = () => {
             </div>
           )}
         </div>
-        <Link href="/search" className="mx-2">
+        <Link href="#" className="mx-2 transition hover:scale-150">
           <IoSearchOutline className="w-5 h-5" />
         </Link>
 
