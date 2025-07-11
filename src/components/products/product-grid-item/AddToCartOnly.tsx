@@ -24,7 +24,10 @@ export const AddToCartOnly = ({ product }: Props) => {
   return (
     <button
       onClick={onAddToCartButton}
-      className="mt-3 w-full bg-[#FF7C00] hover:bg-[#FFD700] text-white font-medium py-1.5 rounded-xl shadow-sm transition flex justify-center items-center gap-2 text-sm"
+      className={`mt-3 w-full  text-white font-medium py-1.5 rounded-xl shadow-sm transition flex justify-center items-center gap-2 text-sm ${
+        !product.inStock ? 'btn-disabled' : 'bg-[#FF7C00] hover:bg-[#FFD700]'
+      }`}
+      disabled={product.inStock === 0}
     >
       Agregar al carrito
       <svg

@@ -17,10 +17,18 @@ export const ProductGridItem2 = ({ product }: Props) => {
   const [displayImage, setDisplayImage] = useState(product.images[0]);
 
   return (
-    <div className="max-w-sm min-h-[400px] bg-[#FFF4DC] rounded-2xl shadow-xl overflow-hidden transition hover:scale-105 hover:shadow-2xl font-sans flex flex-col">
+    <div
+      className={`max-w-sm min-h-[400px]  rounded-2xl shadow-xl overflow-hidden transition hover:scale-105 hover:shadow-2xl font-sans flex flex-col ${
+        product.inStock ? 'bg-[#FFF4DC]' : 'bg-gray-200'
+      }`}
+    >
       <div className="relative">
         {/* Stock etiqueta */}
-        <div className="absolute bottom-3 left-3 bg-[#FF7C00] text-white text-xs px-3 py-1 rounded-full shadow">
+        <div
+          className={`absolute bottom-3 left-3 ${
+            !product.inStock ? 'bg-gray-600' : 'bg-[#FF7C00]'
+          }  text-white text-xs px-3 py-1 rounded-full shadow`}
+        >
           Stock: {product.inStock}
         </div>
 
@@ -51,7 +59,9 @@ export const ProductGridItem2 = ({ product }: Props) => {
           >
             <h2 className="text-base font-semibold">{product.title}</h2>
           </Link>
-          <span className="bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs font-bold px-2 py-0.5 rounded-xl shadow">
+          <span
+            className={` text-xs font-bold px-2 py-0.5 rounded-xl shadow bg-gradient-to-r from-yellow-400 ${' to-orange-500 '} text-white`}
+          >
             {currencyFormat(product.price)}
           </span>
         </div>
