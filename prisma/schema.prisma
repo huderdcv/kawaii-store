@@ -123,8 +123,6 @@ model UserAddress {
 // Order de compras
 model Order {
   id             String    @id @default(uuid())
-  subTotal       Float
-  tax            Float
   total          Float
   itemsInOrder   Int
   createdAt      DateTime  @default(now())

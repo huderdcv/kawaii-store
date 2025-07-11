@@ -98,14 +98,6 @@ export default async function OrdersByIdPage({ params }: Props) {
                   : `${order?.itemsInOrder} artículos`}
               </span>
 
-              <span>Subtotal</span>
-              <span className="text-right">
-                {currencyFormat(order!.subTotal)}
-              </span>
-
-              <span>Impuestos (15%)</span>
-              <span className="text-right">{currencyFormat(order!.tax)}</span>
-
               <span className="mt-5 text-2xl">Total:</span>
               <span className="mt-5 text-2xl text-right">
                 {currencyFormat(order!.total)}

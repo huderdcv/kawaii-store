@@ -1,0 +1,3 @@
+-- AlterTable
+ALTER TABLE "Order" ALTER COLUMN "subTotal" DROP NOT NULL,
+ALTER COLUMN "tax" DROP NOT NULL;
