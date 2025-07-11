@@ -104,31 +104,31 @@ export const TopMenu = () => {
           </button>
 
           {isDropdownOpen && (
-            <div className="absolute z-10 w-screen bg-white shadow-md rounded-md mt-2">
+            <div className="absolute z-10 w-screen bg-orange-50 shadow-md rounded-md mt-2">
               <Link
                 onClick={handleLinkClick}
-                className="block px-4 py-2 hover:bg-[#ffaf63]"
+                className="block px-4 py-2 hover:bg-orange-200"
                 href="/franchise/pokemon"
               >
                 Pokemon
               </Link>
               <Link
                 onClick={handleLinkClick}
-                className="block px-4 py-2 hover:bg-[#ffaf63]"
+                className="block px-4 py-2 hover:bg-orange-200"
                 href="/franchise/dragonball"
               >
                 Dragon Ball
               </Link>
               <Link
                 onClick={handleLinkClick}
-                className="block px-4 py-2 hover:bg-[#ffaf63]"
+                className="block px-4 py-2 hover:bg-orange-200"
                 href="/franchise/bts"
               >
                 BTS
               </Link>
               <Link
                 onClick={handleLinkClick}
-                className="block px-4 py-2 hover:bg-[#ffaf63]"
+                className="block px-4 py-2 hover:bg-orange-200"
                 href="/franchise/none"
               >
                 Sin franquicia
