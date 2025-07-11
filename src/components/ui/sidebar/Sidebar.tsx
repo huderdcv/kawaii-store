@@ -43,7 +43,7 @@ export const Sidebar = () => {
       {/* Sidemenu */}
       <nav
         className={clsx(
-          'fixed top-0 right-0 h-screen bg-white z-50 shadow-2xl transform transition-transform duration-300',
+          'fixed top-0 right-0 h-screen bg-orange-50 z-50 shadow-2xl transform transition-transform duration-300',
           {
             'translate-x-full': !isSideMenuOpen,
           },
@@ -58,11 +58,11 @@ export const Sidebar = () => {
 
         {/* Input */}
         <div className="relative mt-14">
-          <IoSearchOutline size={20} className="absolute top-2 left-2" />
+          <IoSearchOutline size={20} className="absolute top-2 left-2 " />
           <input
             type="text"
             placeholder="Buscar"
-            className="w-full bg-gray-50 rounded pl-10 py-1 pr-10 border-b-2 text-xl border-gray-200 focus:outline-none focus:border-blue-500"
+            className="w-full bg-orange-50 rounded pl-10 py-1 pr-10 border-b-2 text-xl border-gray-200 focus:outline-none focus:border-orange-500 "
           />
         </div>
 
@@ -73,7 +73,7 @@ export const Sidebar = () => {
             <Link
               href="/profile"
               onClick={() => closeMenu()}
-              className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+              className="flex items-center mt-10 p-2 hover:bg-orange-200 rounded transition-all"
             >
               <IoPersonOutline size={30} />
               <span className="ml-3 text-xl">Perfil</span>
@@ -82,7 +82,7 @@ export const Sidebar = () => {
             <Link
               href="/orders"
               onClick={() => closeMenu()}
-              className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+              className="flex items-center mt-10 p-2 hover:bg-orange-200 rounded transition-all"
             >
               <IoTicketOutline size={30} />
               <span className="ml-3 text-xl">Ordenes</span>
@@ -92,7 +92,7 @@ export const Sidebar = () => {
 
         {isAuthenticated && (
           <button
-            className="flex w-full items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+            className="flex w-full items-center mt-10 p-2 hover:bg-orange-200 rounded transition-all"
             onClick={() => logout()}
           >
             <IoLogOutOutline size={30} />
@@ -103,7 +103,7 @@ export const Sidebar = () => {
         {!isAuthenticated && (
           <Link
             href="/auth/login"
-            className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+            className="flex items-center mt-10 p-2 hover:bg-orange-200 rounded transition-all"
             onClick={() => closeMenu()}
           >
             <IoLogInOutline size={30} />
@@ -119,7 +119,7 @@ export const Sidebar = () => {
             <Link
               href="/admin/products"
               onClick={() => closeMenu()}
-              className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+              className="flex items-center mt-10 p-2 hover:bg-orange-200 rounded transition-all"
             >
               <IoShirtOutline size={30} />
               <span className="ml-3 text-xl">Productos</span>
@@ -128,7 +128,7 @@ export const Sidebar = () => {
             <Link
               href="/admin/orders"
               onClick={() => closeMenu()}
-              className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+              className="flex items-center mt-10 p-2 hover:bg-orange-200 rounded transition-all"
             >
               <IoTicketOutline size={30} />
               <span className="ml-3 text-xl">Ordenes</span>
@@ -137,7 +137,7 @@ export const Sidebar = () => {
             <Link
               href="/admin/users"
               onClick={() => closeMenu()}
-              className="flex items-center mt-10 p-2 hover:bg-gray-100 rounded transition-all"
+              className="flex items-center mt-10 p-2 hover:bg-orange-200 rounded transition-all"
             >
               <IoPeopleOutline size={30} />
               <span className="ml-3 text-xl">Usuarios</span>
