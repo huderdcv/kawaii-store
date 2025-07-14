@@ -45,7 +45,7 @@ export const TopMenu = () => {
   };
 
   return (
-    <nav className="flex px-5 justify-between items-center w-full bg-[#FF7C00]">
+    <nav className="flex px-5 justify-between items-center w-full bg-[#FF7C00] fixed top-0 left-0 z-50">
       {/* Logo */}
       <div className="transition hover:scale-125">
         <Link href="/">
